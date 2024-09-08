@@ -6,8 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
+
 @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table (name = "employees")
@@ -32,5 +33,20 @@ public class Employee {
 
     @Column(name = "mobile_number")
     private String mobileNumber;
+
+    @Column(name = "date_of_birth")
+    private String dateofbirth;
+
+    @Column(name = "gender")
+    private String gender;
+
+    @Column(name = "country")
+    private String country;
+
+    @Column(name = "picture")
+    private String picture;
+
+
+
 
 }

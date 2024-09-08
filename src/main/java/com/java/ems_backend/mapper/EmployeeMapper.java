@@ -3,6 +3,8 @@ package com.java.ems_backend.mapper;
 import com.java.ems_backend.dto.EmployeeDto;
 import com.java.ems_backend.entity.Employee;
 
+
+
 public class EmployeeMapper {
 
     public static EmployeeDto mapToEmployeeDto(Employee employee) {
@@ -12,7 +14,12 @@ public class EmployeeMapper {
                 employee.getMiddleName(),
                 employee.getLastName(),
                 employee.getEmail(),
-                employee.getMobileNumber()
+                employee.getMobileNumber(),
+                employee.getDateofbirth(),
+                employee.getCountry(),
+                employee.getGender(),
+                employee.getPicture()
+
         );
     }
     public static Employee mapToEmployee(EmployeeDto employeeDto) {
@@ -22,7 +29,12 @@ public class EmployeeMapper {
                 employeeDto.getMiddleName(),
                 employeeDto.getLastName(),
                 employeeDto.getEmail(),
-                employeeDto.getMobileNumber()
+                employeeDto.getMobileNumber(),
+                employeeDto.getDateofbirth(),
+                employeeDto.getCountry(),
+                employeeDto.getGender(),
+                employeeDto.getPicture()
         );
     }
+
 }

@@ -37,7 +37,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public List<EmployeeDto> getAllEmployees() {
         List<Employee> employees = employeeRepository.findAll();
-        return employees.stream().map((employee) -> EmployeeMapper.mapToEmployeeDto(employee))
+        return employees.stream().map(EmployeeMapper::mapToEmployeeDto)
                 .collect(Collectors.toUnmodifiableList());
     }
 
@@ -49,9 +49,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         // update employee
         employee.setFirstName(employeeDto.getFirstName());
         employee.setLastName(employeeDto.getLastName());
-        employee.setMiddleName(employeeDto.getMiddleName());
         employee.setEmail(employeeDto.getEmail());
         employee.setMobileNumber(employeeDto.getMobileNumber());
+        employee.setCountry(employeeDto.getCountry());
+        employee.setGender(employeeDto.getGender());
+        employee.setDateofbirth(employeeDto.getDateofbirth());
+        employee.setPicture(employeeDto.getPicture());
         // save employee in the repository
         Employee updatedEmployee = employeeRepository.save(employee);
         return EmployeeMapper.mapToEmployeeDto(updatedEmployee);

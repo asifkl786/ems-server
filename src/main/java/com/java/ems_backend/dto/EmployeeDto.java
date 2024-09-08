@@ -1,13 +1,11 @@
 package com.java.ems_backend.dto;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-@Getter
+
 @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 
@@ -19,4 +17,8 @@ public class EmployeeDto {
     private String lastName;
     private String email;
     private String mobileNumber;
+    private String dateofbirth;
+    private String gender;
+    private String country;
+    private String picture;
 }
